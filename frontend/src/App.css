@@ -1,0 +1,246 @@
+/* Variables de color */
+:root {
+  --bg-dark: #121212;           /* Fondo principal negro oscuro */
+  --bg-card: #1e1e1e;           /* Fondo de tarjetas */
+  --text-white: #ffffff;        /* Texto blanco puro */
+  --text-gray: #b3b3b3;         /* Texto gris claro */
+  --accent-blue: #3a6ea5;       /* Azul principal para botones */
+  --accent-hover: #4d8fd6;      /* Azul hover */
+  --border-dark: #333333;       /* Bordes oscuros */
+}
+
+/* Estilos generales */
+body {
+  background-color: var(--bg-dark);
+  color: var(--text-white);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+/* HOME - Tarjetas */
+.home-container {
+  padding: 2rem 0;
+}
+
+.home-card {
+  background-color: var(--bg-card);
+  border-radius: 10px;
+  padding: 2.5rem 1.5rem;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid var(--border-dark);
+}
+
+.home-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.home-icon {
+  font-size: 4.5rem;
+  color: var(--text-white);
+  margin-bottom: 1.5rem;
+}
+
+.card-title {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: var(--text-white);
+}
+
+.card-text {
+  color: var(--text-gray);
+  margin-bottom: 2rem;
+  font-size: 1.1rem;
+}
+
+/* Botones */
+.btn-primary {
+  background-color: var(--accent-blue);
+  border: none;
+  padding: 0.7rem 1.8rem;
+  font-size: 1.1rem;
+  font-weight: 500;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: var(--accent-hover);
+  transform: translateY(-2px);
+}
+
+.btn-outline {
+  background-color: transparent;
+  border: 1px solid var(--text-white);
+  color: var(--text-white);
+  padding: 0.5rem 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.btn-outline:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Tablas */
+.table-container {
+  background-color: var(--bg-card);
+  border-radius: 10px;
+  padding: 1.5rem;
+  margin-top: 2rem;
+  border: 1px solid var(--border-dark);
+}
+
+.table-dark {
+  background-color: transparent !important;
+  color: var(--text-white);
+}
+
+.table-dark thead th {
+  background-color: #2a2a2a !important;
+  border-bottom: 2px solid var(--border-dark);
+}
+
+/* Modales */
+.modal-content {
+  background-color: var(--bg-card);
+  color: var(--text-white);
+  border: 1px solid var(--border-dark);
+}
+
+.modal-header {
+  border-bottom: 1px solid var(--border-dark);
+}
+
+.modal-footer {
+  border-top: 1px solid var(--border-dark);
+}
+
+/* Formularios */
+.form-control {
+  background-color: #2a2a2a;
+  border: 1px solid var(--border-dark);
+  color: var(--text-white);
+  padding: 0.7rem 1rem;
+}
+
+.form-control:focus {
+  background-color: #2a2a2a;
+  color: var(--text-white);
+  border-color: var(--accent-blue);
+  box-shadow: 0 0 0 0.25rem rgba(58, 110, 165, 0.25);
+}
+
+.form-label {
+  color: var(--text-gray);
+  margin-bottom: 0.5rem;
+}
+
+/* Botones de acción */
+.action-btn {
+  padding: 0.4rem 0.8rem;
+  font-size: 0.9rem;
+  margin: 0 0.2rem;
+}
+
+.btn-edit {
+  background-color: #3a6ea5;
+  border: none;
+}
+
+.btn-delete {
+  background-color: #a53a3a;
+  border: none;
+}
+
+/* Página de Productos - Estilos adicionales */
+
+/* Contenedor principal (opcional si querés emparejar márgenes) */
+.productos-container {
+  background-color: var(--bg-dark);
+  color: var(--text-white);
+}
+
+/* Estilo de tabla */
+.table {
+  background-color: var(--bg-card);
+  color: var(--text-white);
+  border: 1px solid var(--border-dark);
+}
+
+.table th,
+.table td {
+  border: 1px solid var(--border-dark);
+}
+
+.table thead {
+  background-color: #2a2a2a;
+}
+
+/* Botón 'Agregar Producto' */
+.btn-primary {
+  background-color: var(--accent-blue);
+  border: none;
+  color: var(--text-white);
+}
+
+.btn-primary:hover {
+  background-color: var(--accent-hover);
+}
+
+/* Botón 'Exportar PDF' */
+.btn-success {
+  background-color: #198754;
+  border: none;
+  color: var(--text-white);
+}
+
+.btn-success:hover {
+  background-color: #28a745;
+}
+
+/* Botón 'Editar' */
+.btn-warning {
+  background-color: #ffc107;
+  border: none;
+  color: #000;
+}
+
+.btn-warning:hover {
+  background-color: #ffca2c;
+}
+
+/* Botón 'Eliminar' */
+.btn-danger {
+  background-color: #dc3545;
+  border: none;
+  color: var(--text-white);
+}
+
+.btn-danger:hover {
+  background-color: #c82333;
+}
+
+/* Botón '← Inicio' */
+.btn-outline-secondary {
+  border: 1px solid var(--text-white);
+  color: var(--text-white);
+  background-color: transparent;
+  transition: all 0.3s ease;
+}
+
+.btn-outline-secondary:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
